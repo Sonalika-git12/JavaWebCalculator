@@ -7,11 +7,11 @@
   <version>0.1</version>
   <name>WebAppCal Maven Webapp</name>
   <url>http://maven.apache.org</url>
-     <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <maven.compiler.source>17</maven.compiler.source>
-      <maven.compiler.target>17</maven.compiler.target>
-   </properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -19,18 +19,19 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>servlet-api</artifactId>
-    <version>4.0.1</version>
-</dependency>
-</dependencies>
-<distributionManagement>
-  <repository>
-    <id>releases</id>
-    <!-- <url>http://52.204.135.48:8081/nexus/content/repositories/releases</url> -->    
-    <url>http://binary.ibm.com/nexus/content/repositories/releases</url>
-  </repository>
-</distributionManagement>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <!-- <url>http://52.204.135.48:8081/nexus/content/repositories/releases</url> -->    
+      <url>http://binary.ibm.com/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
 </project>
+
