@@ -1,13 +1,10 @@
-# Use an official Tomcat image as the base image
-FROM tomcat:9-jdk17-openjdk-slim
+# Use the official Tomcat image
+FROM tomcat:9.0
 
-# Set the working directory
-WORKDIR /usr/local/tomcat/webapps
+# Copy your WAR file into the webapps directory
+COPY ./webapp-0.1.war /usr/local/tomcat/webapps/
 
-# Copy the WAR file to the Tomcat webapps folder
-COPY target/webapp.war /usr/local/tomcat/webapps/webapp.war
-
-# Expose Tomcat's port
+# Expose the default Tomcat port
 EXPOSE 8080
 
 # Start Tomcat
